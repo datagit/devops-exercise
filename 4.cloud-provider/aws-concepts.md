@@ -28,7 +28,7 @@ API keys for programmatic access (CLI).
 Amazon EC2
 Amazon Elastic Container Service(ECS)
 Elastic Load Balancing -> Serverless
-Amazon EC2 Auto Scaling
+Amazon EC2 Auto Scaling -> https://aws.cmctelecom.vn/post/tai-sao-lai-can-su-dung-amazon-ec2-auto-scaling
 AWS Lambda -> Serverless
 AWS Elastic Beanstalk -> Considered a Platform as a Service (PaaS) solution.
 AWS Serverless Application Model(SAM)
