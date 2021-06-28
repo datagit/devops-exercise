@@ -18,3 +18,7 @@ THERE,FOUR, FIVE
   three times week, four times a week, five times a week
 Always, Usually, Often, Generally, Sometimes, Seldom, Frequently
 ```
+Present Continuous
+```java
+- I am playing football with my friends.
+```
