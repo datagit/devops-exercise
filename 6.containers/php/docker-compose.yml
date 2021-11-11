@@ -1,0 +1,42 @@
+# from Dockerfile
+# docker run -it --name mywebserver -p 8888:80 -h firstserver myphp:2
+# docker exec -it mywebserver bash
+# docker-compose down && docker-compose up -d
+
+version: "3"
+services:
+  backend:
+    container_name: backend
+    # image: getjv/php-apache
+    build: .
+    image: myphp:2
+    restart: always
+    ports:
+      - "8088:80"
+    volumes:
+      - .:/var/www/html
+    # environment:
+    #   - DOCUMENT_ROOT_CONTEXT=public
+    #   - ALLOW_OVERRIDE_OPTION=All
+    #   - APPLICATION_ENV_OPTION=development
+    networks:
+      - app-network
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3308:3306" #-> at pc-host -> localhost:3308
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: 123456
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
