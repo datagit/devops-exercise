@@ -177,4 +177,12 @@ systemctl status docker
 # on macos
 launchctl list | grep docker
 
+# Linux command line
+# 10 lsof command examples: https://www.tecmint.com/10-lsof-command-examples-in-linux/
+# 10 strace command examples: https://www.tecmint.com/strace-commands-for-troubleshooting-and-debugging-linux/
+
+# ubuntu install strace
+sudo apt-get update -y
+sudo apt-get install -y strace
+sudo apt install -y iputils-ping tree telnet
 ```
