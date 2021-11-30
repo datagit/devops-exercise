@@ -95,6 +95,9 @@ sudo su
 sudo su - user01
 su user01
 
+# switch root account
+sudo su -
+
 userdel - user02
 
 whoami
